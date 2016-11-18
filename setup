@@ -1,5 +1,5 @@
 #!/bin/bash
-$WDIR=$(pwd)
+WDIR=$(pwd)
 DATAPATH=$(pwd)/data/wordpress/wp-content
 LOGFILE=$(pwd)/logs/$(date "+%Y%m%d_%H00").txt
 
