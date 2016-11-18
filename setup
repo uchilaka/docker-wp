@@ -16,11 +16,11 @@ fi
 # log location for current container
 logger -s "Will persist (latest) container app data @ $DATAPATH..." 2>> $LOGFILE
 
-# @IMPORTANT define the $MYSQL_... variables in private/vars. This WILL NOT exist in a 
+# @IMPORTANT define the $WP_MYSQL_... variables in private/vars. This WILL NOT exist in a 
 # new deployment on the docker engine
 docker run --name wordpress-stg \
--e WORDPRESS_DB_HOST=$MYSQL_HOST -e WORDPRESS_DB_NAME=$MYSQL_DB \
--e WORDPRESS_DB_USER=$MYSQL_USER -e WORDPRESS_DB_PASSWORD=$MYSQL_PWD \
+-e WORDPRESS_DB_HOST=$WP_MYSQL_HOST -e WORDPRESS_DB_NAME=$WP_MYSQL_DB \
+-e WORDPRESS_DB_USER=$WP_MYSQL_USER -e WORDPRESS_DB_PASSWORD=$WP_MYSQL_PWD \
 -v $DATAPATH:/var/www/html/wp-content \
 -p 7300:80 \
 -d uchilaka/wordpress:dev
