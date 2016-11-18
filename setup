@@ -1,6 +1,11 @@
 #!/bin/bash
+$WDIR=$(pwd)
 DATAPATH=$(pwd)/data/wordpress/wp-content
-LOGFILE=$(pwd)/logs/$(date "+%Y%m%d_%H00").txt 
+LOGFILE=$(pwd)/logs/$(date "+%Y%m%d_%H00").txt
+
+# Include external variables 
+$WDIR/private/vars
+
 if ! [ -d $DATAPATH ]; then
     logger -s "Creating $DATAPATH" 2>> $LOGFILE
     mkdir -p $DATAPATH
