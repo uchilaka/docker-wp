@@ -8,6 +8,9 @@ usermod -aG admin localadmin && chown -R localadmin:localadmin /home/localadmin
 
 ENV HOME=/home/localadmin
 
+# install editor
+apt-get update && apt-get upgrade && apt-get install nano -y
+
 # WARNING! Changing WORKDIR can compromise the inherited configurations from the parent / source container
 # Bundle app source 
 #COPY . /usr/src/app
