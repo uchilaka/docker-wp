@@ -1,6 +1,6 @@
 #!/bin/bash
 WDIR=$(pwd)
-DATAPATH=$(pwd)/data/wordpress/wp-content
+DATAPATH=$(pwd)/data/wordpress
 LOGFILE=$(pwd)/logs/$(date "+%Y%m%d_%H00").txt
 
 # Include external variables 
@@ -23,6 +23,6 @@ logger -s "Will persist (latest) container app data @ $DATAPATH..." 2>> $LOGFILE
 docker run --name wordpress-stg \
 -e WORDPRESS_DB_HOST=$WP_MYSQL_HOST -e WORDPRESS_DB_NAME=$WP_MYSQL_DB \
 -e WORDPRESS_DB_USER=$WP_MYSQL_USER -e WORDPRESS_DB_PASSWORD=$WP_MYSQL_PWD \
--v $DATAPATH:/var/www/html/wp-content \
+-v $DATAPATH/www:/var/www/html \
 -p 7300:80 \
 -d uchilaka/wordpress:dev
