@@ -1,12 +1,12 @@
 #!/bin/bash
 DATAPATH=$(pwd)/data/wordpress/wp-content
+LOGFILE=$(pwd)/logs/$(date "+%Y%m%d_%H00").txt 
 if ! [ -d $DATAPATH ]; then
     logger -s "Creating $DATAPATH" 2>> $LOGFILE
     mkdir -p $DATAPATH
 else
     echo "Found data directory: $DATAPATH"
 fi
-LOGFILE=$(pwd)/logs/$(date "+%Y%m%d_%H00").txt 
 # log location for current container
 logger -s "Will persist (latest) container app data @ $DATAPATH..." 2>> $LOGFILE
 
