@@ -4,7 +4,9 @@ DATAPATH=$(pwd)/data/wordpress/wp-content
 LOGFILE=$(pwd)/logs/$(date "+%Y%m%d_%H00").txt
 
 # Include external variables 
-$WDIR/private/vars
+source $WDIR/private/vars.conf
+
+echo "Database config -> mysql://${WP_MYSQL_HOST}/${WP_MYSQL_DB};username=${WP_MYSQL_USER};password=${WP_MYSQL_PWD}"
 
 if ! [ -d $DATAPATH ]; then
     logger -s "Creating $DATAPATH" 2>> $LOGFILE

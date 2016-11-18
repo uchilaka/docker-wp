@@ -1,7 +1,7 @@
-## Definition of private/vars file
+## Definition of private/vars.conf file
 #
-# export WP_MYSQL_HOST="{DB_HOST}" 
-# export WP_MYSQL_DB="{DB_NAME}"
-# export WP_MYSQL_USER="{DB_USER}"
-# export WP_MYSQL_PWD="{DB_PW}"
+#WP_MYSQL_HOST="{DB_HOST}" 
+#WP_MYSQL_DB="{DB_NAME}"
+#WP_MYSQL_USER="{DB_USER}"
+#WP_MYSQL_PWD="{DB_PW}"
 #
