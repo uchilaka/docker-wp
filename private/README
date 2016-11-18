@@ -1,0 +1,7 @@
+## Definition of private/vars file
+#
+# MYSQL_HOST="{DB_HOST}" 
+# MYSQL_DB="{DB_NAME}"
+# MYSQL_USER="{DB_USER}"
+# MYSQL_PWD="{DB_PW}"
+#
