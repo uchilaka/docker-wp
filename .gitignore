@@ -7,3 +7,5 @@ private/*
 
 logs/*
 !logs/README
+
+.vscode/*
