@@ -1,0 +1,9 @@
+data/*
+!data/wordpress/wp-content/README
+!data/wordpress/www/README
+
+private/*
+!private/README
+
+logs/*
+!logs/README
