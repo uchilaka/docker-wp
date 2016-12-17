@@ -25,4 +25,5 @@ docker run --name $WP_CONTAINER_NAME \
 -e WORDPRESS_DB_USER=$WP_MYSQL_USER -e WORDPRESS_DB_PASSWORD=$WP_MYSQL_PWD \
 -v $DATAPATH/www:/var/www/html \
 -p $WWW_PORT:80 \
+--restart unless-stopped \
 -d uchilaka/wordpress:dev
